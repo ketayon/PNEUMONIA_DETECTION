@@ -59,11 +59,11 @@ weighted avg       0.83      0.79      0.77       624
 ### 4. Qiskit Machine Learning Model
 
 ```
-Accuracy from the training data: 42.9%
+Accuracy from the training data: 49.17%
 ***************************************************
-Accuracy from the test data: 39.0%
+Accuracy from the test data: 47.5%
 ***************************************************
-Accuracy: 40.50%
+Accuracy: 45.00%
 ```
 
 ## Performance Summary
