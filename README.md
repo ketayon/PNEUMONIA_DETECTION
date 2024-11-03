@@ -1,19 +1,21 @@
+
 # PNEUMONIA_DETECTION
 
-This project aims to develop quantum machine learning (QML) models for the screening and detection of pneumonia from chest X-ray images. The models leverage the power of quantum computing to enhance the accuracy and efficiency of pneumonia diagnosis, which is crucial for timely medical intervention.
+This project aims to develop quantum machine learning (QML) models for the screening and detection of pneumonia from chest X-ray images. By harnessing the potential of quantum computing, these models strive to improve the accuracy and efficiency of pneumonia diagnosis, supporting timely medical interventions.
 
 ## Project Overview
 
-Pneumonia is a serious respiratory condition that can lead to significant morbidity and mortality. Early detection is essential for effective treatment. This project explores various quantum machine learning techniques to improve the classification of chest X-ray images into two categories: **NORMAL** and **PNEUMONIA**.
+Pneumonia is a serious respiratory condition with high morbidity and mortality rates. Early detection is crucial for effective treatment. This project explores various quantum machine learning techniques for classifying chest X-ray images into **NORMAL** and **PNEUMONIA** categories.
 
 ## Models Implemented
 
-The project includes several models based on quantum machine learning frameworks, each demonstrating different approaches to the classification task. The following models have been implemented:
+The project includes multiple quantum machine learning models, each exploring different classification techniques:
 
 - **PennyLane Model** (`pennylane_pneumonia_detection`)
 - **Qiskit Hybrid Model** (`qiskit_hybrid_pneumonia_detection`)
 - **Quantum Model** (`quantum_pneumonia_detection`)
 - **Qiskit Machine Learning Model** (`qiskit_ml_pneumonia_detection`)
+- **Piqture Library Model** (`piqture_pneumonia_detection`) - Utilizes specific layers from the `piqture` library.
 
 ## Classification Reports
 
@@ -59,28 +61,41 @@ weighted avg       0.83      0.79      0.77       624
 ### 4. Qiskit Machine Learning Model
 
 ```
-Accuracy from the training data: 49.17%
+Accuracy from the training data: 49.6%
 ***************************************************
-Accuracy from the test data: 47.5%
+Accuracy from the test data: 48.33%
 ***************************************************
-Accuracy: 45.00%
+Accuracy: 47.92%
+```
+
+### 5. Piqture Library Model
+
+The `piqture_pneumonia_detection.ipynb` model is the latest addition, and it integrates specialized layers from the `piqture` library. Its initial performance with the current configuration is as follows:
+
+```
+Accuracy from the training data: 49.6%
+***************************************************
+Accuracy from the test data: 48.33%
+***************************************************
+Accuracy: 47.92%
 ```
 
 ## Performance Summary
 
-- **PennyLane Model**: Shows the best overall performance, with a balanced precision and recall for both classes.
-- **Qiskit Hybrid Model**: Exhibits high precision for the NORMAL class but struggles with recall, indicating a potential issue with false negatives.
-- **Quantum Model**: Provides reasonable performance but highlights challenges in achieving consistent classification across both classes.
-- **Qiskit Machine Learning Model**: Demonstrates lower accuracy, indicating that further refinement is needed to improve its performance.
+- **PennyLane Model**: Shows the best overall performance, with a balanced precision and recall.
+- **Qiskit Hybrid Model**: High precision for the NORMAL class but struggles with recall.
+- **Quantum Model**: Offers reasonable performance but needs consistency across classes.
+- **Qiskit Machine Learning Model**: Requires further refinement due to lower accuracy.
+- **Piqture Library Model**: Uses advanced layers, demonstrating the potential of model customization.
 
 ## Usage
 
 ### Requirements
 
-To run the models, ensure you have the following installed:
+To run the models, you need the following:
 
 - **Python 3.7** or later
-- Required libraries:
+- Key libraries:
   - `pennylane`
   - `qiskit`
   - `numpy`
@@ -88,30 +103,32 @@ To run the models, ensure you have the following installed:
   - `torch`
   - `matplotlib`
   - `PIL` (Pillow)
+  - `piqture` (if using the `piqture_pneumonia_detection.ipynb` model)
 
-You can install the required libraries using pip:
+Install the libraries via pip:
 
 ```bash
-pip install pennylane qiskit numpy scikit-learn torch matplotlib pillow
+pip install pennylane qiskit numpy scikit-learn torch matplotlib pillow piqture
 ```
 
 ### Running the Models
 
-Each model is implemented in its respective notebook. To execute a model, open the Jupyter Notebook and run the cells sequentially. Make sure to set the correct paths for the dataset you intend to use.
+Each model is in its respective notebook:
 
-- **PennyLane Model**: Open `pennylane_pneumonia_detection.ipynb` and execute the cells.
-- **Qiskit Hybrid Model**: Open `qiskit_hybrid_pneumonia_detection.ipynb`.
-- **Quantum Model**: Open `quantum_pneumonia_detection.ipynb`.
-- **Qiskit Machine Learning Model**: Open `qiskit_ml_pneumonia_detection.ipynb`.
+- **PennyLane Model**: `pennylane_pneumonia_detection.ipynb`
+- **Qiskit Hybrid Model**: `qiskit_hybrid_pneumonia_detection.ipynb`
+- **Quantum Model**: `quantum_pneumonia_detection.ipynb`
+- **Qiskit Machine Learning Model**: `qiskit_ml_pneumonia_detection.ipynb`
+- **Piqture Library Model**: `piqture_pneumonia_detection.ipynb`
 
 ### Dataset
 
-The models are designed to work with a dataset of chest X-ray images. Ensure that the dataset is organized correctly, typically with separate folders for **NORMAL** and **PNEUMONIA** classes. You can modify the dataset paths in the notebooks as necessary.
+Ensure that the dataset of chest X-ray images is organized into separate folders for **NORMAL** and **PNEUMONIA** classes. Update dataset paths as needed in each notebook.
 
 ## Conclusion
 
-This project showcases the potential of quantum machine learning in the medical domain, particularly for screening pneumonia from chest X-ray images. While initial results are promising, ongoing work is required to improve accuracy and generalization across different models.
+This project highlights the promise of quantum machine learning in medical imaging, particularly for detecting pneumonia from chest X-ray images. However, **improving the accuracy and generalization of qiskit_machine_learning models requires powerful devices equipped with GPUs**. These resources facilitate faster computation, especially when optimizing parameters, thus enabling better performance and consistency.
 
 ## Acknowledgements
 
-We acknowledge the contributions of the quantum computing community and the researchers in the field of medical imaging for their foundational work that enables this project.
+We thank the quantum computing and medical imaging communities for their foundational work, which has been instrumental in this project.
