@@ -81,7 +81,7 @@ Accuracy: 48.75%
 
 ### 6. Quantum Kernel Trainer Model
 
-The `QuantumKernelTrainer_qiskit_pneumonia_detection` notebook provides the following classification report with **16 qubits**:
+The `QuantumKernelTrainer_qiskit_pneumonia_detection` notebook provides the following classification report with **8 qubits**:
 
 ```
 Classification Report:
