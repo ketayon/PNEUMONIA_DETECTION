@@ -72,11 +72,11 @@ Accuracy: 47.92%
 ### 5. Piqture Library Model
 
 ```
-Accuracy from the training data: 49.6%
+Accuracy from the training data: 49.3%
 ***************************************************
-Accuracy from the test data: 48.33%
+Accuracy from the test data: 49.0%
 ***************************************************
-Accuracy: 47.92%
+Accuracy: 48.75%
 ```
 
 ### 6. Quantum Kernel Trainer Model
