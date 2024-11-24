@@ -62,21 +62,21 @@ weighted avg       0.83      0.79      0.77       624
 ### 4. Qiskit Machine Learning Model
 
 ```
-Accuracy from the training data: 49.6%
+Accuracy from the training data: 74.4%
 ***************************************************
-Accuracy from the test data: 48.33%
+Accuracy from the test data: 68.0%
 ***************************************************
-Accuracy: 47.92%
+Accuracy: 68.00%
 ```
 
 ### 5. Piqture Library Model
 
 ```
-Accuracy from the training data: 49.3%
+Accuracy from the training data: 74.4%
 ***************************************************
-Accuracy from the test data: 49.0%
+Accuracy from the test data: 68.0%
 ***************************************************
-Accuracy: 48.75%
+Accuracy: 68.00%
 ```
 
 ### 6. Quantum Kernel Trainer Model
