@@ -17,6 +17,7 @@ The project includes multiple quantum machine learning models, each exploring di
 - **Qiskit Machine Learning Model** (`qiskit_ml_pneumonia_detection`)
 - **Piqture Library Model** (`piqture_pneumonia_detection`)
 - **Quantum Kernel Trainer Model** (`QuantumKernelTrainer_qiskit_pneumonia_detection`) - Uses `QuantumKernelTrainer` from Qiskit.
+- **Ingenii Hybrid Model** (`ìngenii_pneumonia_detection`)
 
 ## Classification Reports
 
@@ -120,14 +121,31 @@ Confusion Matrix:
 ROC AUC Score: 0.74
 ```
 
+### 7.Ingenii Hybrid Model
+
+```
+Classification Report:
+              precision    recall  f1-score   support
+
+      NORMAL       0.92      0.59      0.72       234
+   PNEUMONIA       0.80      0.97      0.88       390
+
+    accuracy                           0.83       624
+   macro avg       0.86      0.78      0.80       624
+weighted avg       0.84      0.83      0.82       624
+
+```
+
 ## Performance Summary
 
-- **PennyLane Model**: Shows the best overall performance, with a balanced precision and recall.
-- **Qiskit Hybrid Model**: High precision for the NORMAL class but struggles with recall.
-- **Quantum Model**: Offers reasonable performance but needs consistency across classes.
-- **Qiskit Machine Learning Model**: Requires further refinement due to lower accuracy.
-- **Piqture Library Model**: Uses advanced layers, demonstrating the potential of model customization.
-- **Quantum Kernel Trainer Model**: Achieves an accuracy of 70% with a ROC AUC score of 0.74, which is promising.
+**PennyLane Model**: Shows good overall performance with a high recall for PNEUMONIA but struggles with NORMAL case detection. It achieves a balanced precision for both classes but requires improvement in the recall for NORMAL cases. The overall accuracy is reasonable (0.79).
+- **Qiskit Hybrid Model**: Has very high precision for NORMAL but a low recall, making it good at identifying correct NORMAL cases but missing many others. The recall for PNEUMONIA is perfect (1.00), indicating it detects all pneumonia cases but at the cost of lower precision for PNEUMONIA. The model’s overall accuracy is 0.71, showing an imbalance between precision and recall.
+- **Quantum Model**: Provides reasonable performance with a balanced approach compared to other models. It performs well for PNEUMONIA detection (high recall of 0.98) but needs improvement in the detection of NORMAL cases (recall of 0.48). It achieves an accuracy of 0.79, but consistency across classes can be improved.
+- **Qiskit Machine Learning Model**: Requires further refinement, as it shows relatively low accuracy (68%) on the test data. Although the training accuracy is higher, the model struggles with generalization, indicating a need for better parameter optimization and potential use of GPUs.
+- **Piqture Library Model**: Like the Qiskit Machine Learning Model, it demonstrates lower accuracy (68%) and needs refinement to better generalize on test data. This model shows potential but is limited by inconsistent performance.
+- **Quantum Kernel Trainer Model**: Achieves an accuracy of 70% and a ROC AUC score of 0.74, reflecting promising potential in distinguishing between classes. It has a relatively balanced performance in terms of precision and recall but can be further improved for higher accuracy.
+- **Ingenii Hybrid Model**: Best overall performance with an accuracy of 0.83. It shows a strong F1-score for PNEUMONIA (0.88) and performs well in NORMAL detection, though it could benefit from better recall for NORMAL (0.59). This model strikes the best balance across both classes and shows the most consistent performance.
+
 
 ## Usage
 
