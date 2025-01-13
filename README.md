@@ -103,20 +103,36 @@ weighted avg       0.84      0.83      0.82       624
 ### 6. Pegasos Kernel Model
 
 ```
-Classification Report:
+Pegasos Kernel Classification Report:
               precision    recall  f1-score   support
 
-           0       0.55      0.60      0.57        10
-           1       0.56      0.50      0.53        10
+           0       0.39      0.50      0.43       234
+           1       0.64      0.53      0.58       390
 
-    accuracy                           0.55        20
-   macro avg       0.55      0.55      0.55        20
-weighted avg       0.55      0.55      0.55        20
+    accuracy                           0.52       624
+   macro avg       0.51      0.51      0.51       624
+weighted avg       0.54      0.52      0.52       624
 
 Confusion Matrix:
-[[6 4]
- [5 5]]
+[[116 118]
+ [184 206]]
 ```
+
+### 7. Updated Pegasos Kernel Model
+
+Pegasos Kernel Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.75      0.03      0.05       234
+           1       0.63      0.99      0.77       390
+
+    accuracy                           0.63       624
+   macro avg       0.69      0.51      0.41       624
+weighted avg       0.67      0.63      0.50       624
+
+Confusion Matrix:
+[[  6 228]
+ [  2 388]]
 
 ## Performance Summary
 
