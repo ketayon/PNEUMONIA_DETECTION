@@ -86,6 +86,7 @@ The project includes multiple quantum machine learning models, each exploring di
 - **Best Precision and F1-Score**: PennyLane Model exhibited excellent precision (1.00 for Normal and 0.88 for Tumor) and high F1-scores.
 - **Challenges in Recall**: Models like the Quantum Kernel Trainer and Upgraded Pegasos Kernel showed high precision but struggled with recall for specific classes.
 - **Balanced Performance**: Qiskit Hybrid and torch Quantum models provided a balanced trade-off between precision and recall, making them suitable for general-purpose usage.
+- ** While the Pegasos models exhibit potential, their limitations in balanced classification and sensitivity to specific classes suggest they are better suited for niche applications where high recall for PNEUMONIA is prioritized. Additional refinements, such as improved data preprocessing or hybrid approaches, could enhance their overall performance. It is worth noting the speed of fitting Pegasos models, it is faster than hybrid and classic models 🚀
 
 Overall, the Ingenii Hybrid and PennyLane models are recommended for their superior accuracy and robust performance across multiple metrics.
 
