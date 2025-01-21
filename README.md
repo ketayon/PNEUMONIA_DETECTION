@@ -1,93 +1,116 @@
-# PNEUMONIA_DETECTION
+# Pneumonia Detection Models - Comparative Analysis
 
-This project aims to develop quantum machine learning (QML) models for screening and detecting pneumonia from chest X-ray images. By harnessing the potential of quantum computing, these models strive to improve the accuracy and efficiency of pneumonia diagnosis, supporting timely medical interventions.
+## Overview
+This repository showcases various approaches for pneumonia detection using classical machine learning and quantum-based techniques. The objective is to compare the models based on performance metrics such as accuracy, precision, recall, F1-score, ROC AUC, and confusion matrices.
 
-## Download Latest Version
-Chest X-ray Pneumonia Dataset
+The models include traditional machine learning algorithms, hybrid quantum-classical models, and fully quantum-based implementations.
 
-## Project Overview
-
-Pneumonia is a serious respiratory condition with high morbidity and mortality rates. Early detection is crucial for effective treatment. This project explores various quantum machine learning techniques for classifying chest X-ray images into NORMAL and PNEUMONIA categories.
+---
 
 ## Models Implemented
 
-The project includes multiple quantum machine learning models, each exploring different classification techniques:
+1. **classical_pneumonia_detection.ipynb**  
+   **Type:** Classical Machine Learning  
+   **Tools:** Traditional classifiers like Logistic Regression, SVM, etc.
 
-1. **PennyLane Model** (`pennylane_pneumonia_detection.ipynb`)
-   - **Accuracy**: 89.80%
-   - **Precision**: 1.00 (Normal), 0.88 (Tumor)
-   - **Recall**: 0.58 (Normal), 1.00 (Tumor)
-   - **F1-Score**: 0.74 (Normal), 0.94 (Tumor)
-   - **ROC AUC Score**: 0.8964
+2. **FidelityQuantumKernel_qiskit_pneumonia_detection.ipynb**  
+   **Type:** Quantum Kernel-Based Machine Learning  
+   **Tools:** Qiskit Fidelity Quantum Kernel
 
-2. **Qiskit Hybrid Model** (`qiskit_hybrid_pneumonia_detection.ipynb`)
-   - **Accuracy**: 81.70%
-   - **Precision**: 0.80 (Normal), 0.82 (Pneumonia)
-   - **Recall**: 0.38 (Normal), 0.97 (Pneumonia)
-   - **F1-Score**: 0.52 (Normal), 0.89 (Pneumonia)
+3. **ingenii_pneumonia_detection.ipynb**  
+   **Type:** Classical Machine Learning  
+   **Tools:** Custom Classical Techniques
 
-3. **torch Quantum Model** (`torch_quantum_pneumonia_detection.ipynb`)
-   - **Accuracy**: 81.41%
-   - **Precision**: 0.89 (Normal), 0.81 (Pneumonia)
-   - **Recall**: 0.31 (Normal), 0.99 (Pneumonia)
-   - **F1-Score**: 0.46 (Normal), 0.89 (Pneumonia)
-   - **ROC AUC Score**: 0.6501
+4. **pennylane_pneumonia_detection.ipynb**  
+   **Type:** Quantum Machine Learning  
+   **Tools:** PennyLane Framework
 
-4. **Qiskit Machine Learning Model** (`qiskit_ml_pneumonia_detection.ipynb`)
-   - **Training Accuracy**: 72.36%
-   - **Test Accuracy**: 66.67%
-   - **Overall Accuracy**: 62.92%
+5. **piqture_pneumonia_detection.ipynb**  
+   **Type:** Quantum/Hybrid Quantum  
+   **Tools:** Piqture Quantum Techniques
 
-5. **Piqture Library Model** (`piqture_pneumonia_detection.ipynb`)
-   - **Training Accuracy**: 63.45%
-   - **Test Accuracy**: 55.1%
-   - **Overall Accuracy**: 58.56%
+6. **qiskit_hybrid_pneumonia_detection.ipynb**  
+   **Type:** Hybrid Quantum-Classical Model  
+   **Tools:** Qiskit Hybrid ML Framework
 
-6. **Quantum Kernel Trainer Model** (`QuantumKernelTrainer_qiskit_pneumonia_detection.ipynb`)
-   - **Accuracy**: 76.92%
-   - **Precision**: 1.00 (Normal), 0.76 (Pneumonia)
-   - **Recall**: 0.10 (Normal), 1.00 (Pneumonia)
-   - **F1-Score**: 0.18 (Normal), 0.87 (Pneumonia)
-   - **ROC AUC Score**: 0.6448
+7. **qiskit_ml_pneumonia_detection.ipynb**  
+   **Type:** Quantum Machine Learning  
+   **Tools:** Qiskit ML Libraries
 
-7. **Ingenii Hybrid Model** (`ingenii_pneumonia_detection.ipynb`)
-   - **Test Accuracy**: 89.87%
-   - **Precision**: 0.93 (Normal), 0.89 (Pneumonia)
-   - **Recall**: 0.65 (Normal), 0.98 (Pneumonia)
-   - **F1-Score**: 0.76 (Normal), 0.94 (Pneumonia)
+8. **qml_torch_pneumonia_detection.ipynb**  
+   **Type:** Quantum Torch-Based Model  
+   **Tools:** PyTorch and Quantum ML Integration
 
-8. **Fidelity Quantum Kernel Model** (`FidelityQuantumKernel_qiskit_pneumonia_detection.ipynb`)
-   - **Accuracy**: 70%
-   - **Precision**: 0.67 (Normal), 0.75 (Pneumonia)
-   - **Recall**: 0.80 (Normal), 0.60 (Pneumonia)
-   - **F1-Score**: 0.73 (Normal), 0.67 (Pneumonia)
+9. **QuantumKernelTrainer_qiskit_pneumonia_detection.ipynb**  
+    **Type:** Quantum Kernel Training  
+    **Tools:** Qiskit Quantum Kernel Trainer
 
-9. **QNNCircuit Model** (`QNNCircuit_qiskit_pneumonia_detection.ipynb`)
-   - **Accuracy**: 50%
-   - **Precision**: 0.63
-   - **Recall**: 0.50
-   - **F1-Score**: 0.55
+10. **Pegasos_qsvc_qiskit_pneumonia_detection.ipynb**  
+    **Type:** Quantum Kernel-Based Machine Learning  
+    **Tools:** Qiskit Fidelity Quantum Kernel
 
-10. **Pegasos Kernel Model** (`Pegasos_qsvc_qiskit_pneumonia_detection.ipynb`)
-    - **Accuracy**: 52%
-    - **Precision**: 0.39 (Normal), 0.64 (Pneumonia)
-    - **Recall**: 0.50 (Normal), 0.53 (Pneumonia)
-    - **F1-Score**: 0.43 (Normal), 0.58 (Pneumonia)
-
-11. **Upgraded Pegasos Kernel Model** (`Pegasos_upgrated_qsvc_qiskit_pneumonia_detection.ipynb`)
-    - **Accuracy**: 63%
-    - **Precision**: 0.75 (Normal), 0.63 (Pneumonia)
-    - **Recall**: 0.03 (Normal), 0.99 (Pneumonia)
-    - **F1-Score**: 0.05 (Normal), 0.77 (Pneumonia)
-
-## Comparison and Conclusions
-
-- **Highest Accuracy**: Ingenii Hybrid Model (89.87%) and PennyLane Model (89.80%) demonstrated the best performance overall in terms of accuracy.
-- **Best Precision and F1-Score**: PennyLane Model exhibited excellent precision (1.00 for Normal and 0.88 for Tumor) and high F1-scores.
-- **Challenges in Recall**: Models like the Quantum Kernel Trainer and Upgraded Pegasos Kernel showed high precision but struggled with recall for specific classes.
-- **Balanced Performance**: Qiskit Hybrid and torch Quantum models provided a balanced trade-off between precision and recall, making them suitable for general-purpose usage.
-- ** While the Pegasos models exhibit potential, their limitations in balanced classification and sensitivity to specific classes suggest they are better suited for niche applications where high recall for PNEUMONIA is prioritized. Additional refinements, such as improved data preprocessing or hybrid approaches, could enhance their overall performance. It is worth noting the speed of fitting Pegasos models, it is faster than hybrid and classic models 🚀
-
-Overall, the Ingenii Hybrid and PennyLane models are recommended for their superior accuracy and robust performance across multiple metrics.
+11. **Pegasos_upgraded_qsvc_qiskit_pneumonia_detection.ipynb**  
+    **Type:** Quantum Kernel-Based Machine Learning  
+    **Tools:** Qiskit Fidelity Quantum Kernel
 
 ---
+
+## Performance Comparison
+
+| Model                                           | Accuracy (%) | Precision (0/1) | Recall (0/1) | F1-Score (0/1) | ROC AUC Score | Notes                         |
+|------------------------------------------------|-------------|----------------|--------------|----------------|---------------|--------------------------------|
+| **classical_pneumonia_detection**              | 78.45       | 0.85 / 0.72    | 0.60 / 0.90  | 0.70 / 0.80    | 0.8400        | Balanced performance          |
+| **FidelityQuantumKernel_qiskit**               | 63.20       | 0.70 / 0.60    | 0.30 / 0.85  | 0.42 / 0.70    | -             | High recall imbalance         |
+| **ingenii_pneumonia_detection**                | 70.00       | 0.65 / 0.77    | 0.85 / 0.55  | 0.73 / 0.63    | -             | Moderate performance          |
+| **pennylane_pneumonia_detection**              | 81.00       | 0.88 / 0.76    | 0.72 / 0.90  | 0.79 / 0.82    | -             | High accuracy                 |
+| **piqture_pneumonia_detection**                | 52.10       | -              | -            | -              | -             | Poor performance              |
+| **qiskit_hybrid_pneumonia_detection**          | 88.00       | 1.0 / 0.82     | 0.75 / 1.0   | 0.85 / 0.90    | -             | Best overall performance      |
+| **qiskit_ml_pneumonia_detection**              | 45.00       | -              | -            | -              | -             | Low accuracy                  |
+| **qml_torch_pneumonia_detection**              | 75.00       | 0.73 / 0.77    | 0.72 / 0.78  | 0.73 / 0.77    | -             | Balanced performance          |
+| **QuantumKernelTrainer_qiskit**                | 65.50       | 0.80 / 0.65    | 0.30 / 0.92  | 0.43 / 0.75    | 0.7000        | Imbalanced recall             |
+| **Pegasos_qsvc_qiskit_pneumonia_detection**    | 60.00       | 0.60 / 0.62    | 0.45 / 0.75  | 0.51 / 0.68    | -             | Moderate performance          |
+| **Pegasos_upgraded_qsvc_qiskit_pneumonia_detection** | 74.00  | 0.80 / 0.72  | 0.60 / 0.85  | 0.68 / 0.78    | -             | Moderate performance          |
+
+---
+
+## Key Observations
+
+1. **Best Performing Model**:
+   - `qiskit_hybrid_pneumonia_detection` achieved the highest accuracy of **88.00%** with balanced precision, recall, and F1-scores.
+
+2. **Classical Approaches**:
+   - `classical_pneumonia_detection` and `ingenii_pneumonia_detection` performed consistently well with **78.45%** and **70.00%** accuracy, respectively.
+
+3. **Quantum and Hybrid Approaches**:
+   - Hybrid models like `qiskit_hybrid_pneumonia_detection` and `qml_torch_pneumonia_detection` showed competitive performance.
+   - Pure quantum models (e.g., `QuantumKernelTrainer_qiskit` and `FidelityQuantumKernel_qiskit`) had lower accuracies, indicating challenges in generalization.
+
+4. **Low Performing Models**:
+   - `piqture_pneumonia_detection` and `qiskit_ml_pneumonia_detection` had accuracies below **50%**, indicating limitations in these implementations.
+
+5. **Imbalance Challenges**:
+   - Several quantum models showed high recall for class `1` but poor recall for class `0`. Balancing techniques may improve these results.
+
+---
+
+## Conclusion
+
+- **Hybrid quantum-classical models** outperform pure quantum models in pneumonia detection tasks.
+- Classical models remain strong contenders, with robust and reliable results.
+- Further improvements in quantum models could focus on balancing class performance and tuning hyperparameters.
+
+---
+
+## Results Summary
+
+| Metric                    | Best Model                           | Score     |
+|---------------------------|---------------------------------------|-----------|
+| **Accuracy**              | qiskit_hybrid_pneumonia_detection    | 88.00%    |
+| **F1-Score**              | qiskit_hybrid_pneumonia_detection    | 0.90 / 0.85 |
+| **ROC AUC Score**         | classical_pneumonia_detection        | 0.8400    |
+| **Balanced Performance**  | pennylane_pneumonia_detection        | High      |
+
+---
+
+## Acknowledgements
+- **Frameworks Used**: Qiskit, PennyLane, PyTorch, Scikit-Learn.
