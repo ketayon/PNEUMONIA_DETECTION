@@ -53,6 +53,10 @@ The models include traditional machine learning algorithms, hybrid quantum-class
     **Type:** Quantum Kernel-Based Machine Learning  
     **Tools:** Qiskit Fidelity Quantum Kernel
 
+12. **QSNN_QLSTM_Xray_Detector.ipynb**  
+    **Type:** Brain-Inspired Quantum Neural Network  
+    **Tools:** PennyLane, PyTorch (QSNN + QLSTM Hybrid)
+
 ---
 
 ## Performance Comparison
@@ -70,6 +74,7 @@ The models include traditional machine learning algorithms, hybrid quantum-class
 | **QuantumKernelTrainer_qiskit**                | 65.50       | 0.80 / 0.65    | 0.30 / 0.92  | 0.43 / 0.75    | 0.7000        | Imbalanced recall             |
 | **Pegasos_qsvc_qiskit_pneumonia_detection**    | 60.00       | 0.60 / 0.62    | 0.45 / 0.75  | 0.51 / 0.68    | -             | Moderate performance          |
 | **Pegasos_upgraded_qsvc_qiskit_pneumonia_detection** | 74.00  | 0.80 / 0.72  | 0.60 / 0.85  | 0.68 / 0.78    | -             | Moderate performance          |
+| **QSNN_QLSTM_Xray_Detector**                   | 83.97       | 0.67 / 0.91    | 0.75 / 0.87  | 0.71 / 0.89    | 0.9048        | Strong hybrid brain-inspired model |
 
 ---
 
@@ -83,7 +88,7 @@ The models include traditional machine learning algorithms, hybrid quantum-class
 
 3. **Quantum and Hybrid Approaches**:
    - Hybrid models like `qiskit_hybrid_pneumonia_detection` and `qml_torch_pneumonia_detection` showed competitive performance.
-   - Pure quantum models (e.g., `QuantumKernelTrainer_qiskit` and `FidelityQuantumKernel_qiskit`) had lower accuracies, indicating challenges in generalization.
+   - `QSNN_QLSTM_Xray_Detector` demonstrated strong results combining quantum layers inspired by brain function.
 
 4. **Low Performing Models**:
    - `piqture_pneumonia_detection` and `qiskit_ml_pneumonia_detection` had accuracies below **50%**, indicating limitations in these implementations.
@@ -107,7 +112,7 @@ The models include traditional machine learning algorithms, hybrid quantum-class
 |---------------------------|---------------------------------------|-----------|
 | **Accuracy**              | qiskit_hybrid_pneumonia_detection    | 88.00%    |
 | **F1-Score**              | qiskit_hybrid_pneumonia_detection    | 0.90 / 0.85 |
-| **ROC AUC Score**         | classical_pneumonia_detection        | 0.8400    |
+| **ROC AUC Score**         | QSNN_QLSTM_Xray_Detector             | 0.9048    |
 | **Balanced Performance**  | pennylane_pneumonia_detection        | High      |
 
 ---
